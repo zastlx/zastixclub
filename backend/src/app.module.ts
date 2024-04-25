@@ -13,7 +13,7 @@ import { GetProjectsModule } from "./endpoints/getprojects/getprojects.module";
 @Module({
     imports: [
         ServeStaticModule.forRoot({
-            rootPath: process.env["CLIENT_PATH"] || join(__dirname, "..", "..", "client", "dist"),
+            rootPath: process.env["CLIENT_PATH"] || join(__dirname, "..", "..", "frontend", "dist"),
             exclude: ["/api/(.*)"],
         }),
         MakePostModule,
