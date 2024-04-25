@@ -1,0 +1,18 @@
+.projects {
+    max-height: 85vh;
+    background-color: rgba(0,0,0,0.5);
+    width: 100vw;
+    overflow-y: auto;
+    position: absolute;
+    overflow-x: hidden;
+    bottom: 0;
+}
+
+.projects::-webkit-scrollbar {
+    width: 5px;
+}
+
+.projects::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 5px;
+}

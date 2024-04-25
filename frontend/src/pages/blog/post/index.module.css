@@ -1,0 +1,27 @@
+.post {
+    top: 100px;
+    max-width: 1500px;
+    display: inline;
+    width: 50vw;
+    position: absolute;
+    background-color: rgb(0 0 0 / 70%);
+    padding: 20px;
+}
+
+body {
+    overflow-y: auto;
+}
+
+.post > h1 {
+    text-align: center;
+}
+
+hr {
+    background-color: white;
+    width: 150px;
+}
+
+.content {
+    word-wrap: break-word;
+    font-size: 17px;
+}

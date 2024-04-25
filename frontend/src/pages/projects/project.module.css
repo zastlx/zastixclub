@@ -1,0 +1,65 @@
+.project {
+    padding: 50px;
+    gap: 85px;
+    display: flex;
+}
+
+.projectMobile {
+    padding: 50px;
+    gap: 20px;
+    display: flex;
+    overflow-x: auto;
+    flex-direction: column;
+}
+
+.projectMobile > img {
+    border-radius: 5px;
+    height: 291px;
+    max-width: 575px;
+    min-width: 575px;
+    border: 2px solid rgb(0 0 0);
+    box-shadow: -4px 4px 3px rgb(255 255 255 / 10%);
+    border-left-width: 0px;
+    border-bottom-width: 0px;
+}
+
+.project > img {
+    border-radius: 5px;
+    height: 300px;
+    max-width: 575px;
+    min-width: 575px;
+    border: 2px solid rgb(0 0 0);
+    box-shadow: -4px 4px 3px rgb(255 255 255 / 10%);
+    border-left-width: 0px;
+    border-bottom-width: 0px;
+}
+
+.project > div {
+    position: relative;
+    width: 100%;
+}
+
+.uwu {
+    display: flex;
+    flex-direction: column;
+}
+
+.projectLinks {
+    bottom: 0;
+    position: absolute;
+    font-size: 25px;
+    cursor: default;
+}
+
+.projectLinks > a, .projectLinks > b {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.projectLinks > span {
+    cursor: text;
+}
+
+.description {
+    padding-bottom: 20px;
+}

@@ -1,0 +1,37 @@
+.pfpImg {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.pfpContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+/* stolen from basil */
+.pfpGlow {
+    position: absolute;
+    inset: 0;
+    background-color: #724446;
+    filter: blur(50px);
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.textGlow {
+    text-shadow: -2px 3px 5px #fff;
+    text-align: center;
+}
+ 
+.reviewGrid {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: center;
+    padding-bottom: 2vh;
+}

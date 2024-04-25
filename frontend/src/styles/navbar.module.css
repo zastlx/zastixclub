@@ -1,0 +1,19 @@
+.navbar {
+    display: flex;
+    color: #fff;
+    background-color: #3b2e3033;
+    gap: 2rem;
+    height: 5rem;
+    border-radius: 0 0 20px 20px;
+    width: 25rem;
+    justify-content: center;
+    align-items: center;
+    box-shadow: #d797971a 0 0 14px 5px;
+    flex-wrap: wrap;
+}
+
+.navbar > a > svg {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}

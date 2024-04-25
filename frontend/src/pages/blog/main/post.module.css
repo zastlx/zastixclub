@@ -1,0 +1,23 @@
+.blogPost {
+    text-wrap: nowrap;
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.blogPostLink {
+    font-size: 20px;
+    margin: 0;
+    color: white;
+}
+
+.blogPostMobile {
+    text-wrap: nowrap;
+    width: 100%;
+    display: flex;
+    gap: 1vh;
+    flex-direction: column;
+    align-items: center;
+}
