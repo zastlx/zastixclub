@@ -27,8 +27,8 @@ export class AvatarService {
 		return data;
 	}
 	async getAvatar(userid: string): Promise<string> {
-		// monkxy, denny, me, pablo, death, acai, zey, jod
-		if (!["230580946557075457", "963728078520074250", "253302259696271360", "919417918566060053", "1003477997728313405", "1021090674289942600", "397689850767212544", "944805064097276015"].includes(userid)) throw new BadRequestException();
+		// monkxy, denny, me, pablo, death, acai, zey, jod, syfe
+		if (!["230580946557075457", "963728078520074250", "253302259696271360", "919417918566060053", "1003477997728313405", "1021090674289942600", "397689850767212544", "944805064097276015", "190733468550823945"].includes(userid)) throw new BadRequestException();
 
 		try {
 			const user = await this.fetchUser(userid);
