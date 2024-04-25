@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client"
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 
 import "./styles/index.css"
 import pages from "./pages";
@@ -7,6 +7,10 @@ import pages from "./pages";
 const router = createBrowserRouter([
     {
         path: "/*",
+        element: <Navigate to="/" />
+    },
+    {
+        path: "/",
         element: <pages.home />
     },
     {

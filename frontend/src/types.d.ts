@@ -27,4 +27,6 @@ declare module "*.module.css" {
     export default content;
 }
 
+/// <reference types="vite/client" />
+
 export { Post, Review, Project };
