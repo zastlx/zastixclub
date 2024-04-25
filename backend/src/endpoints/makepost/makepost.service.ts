@@ -1,6 +1,5 @@
-import { Injectable } from "@nestjs/common";
+import { Injectable, UnauthorizedException } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
-import { Response } from "express";
 
 import { MakePostDTO } from "src/dto/makepost.dto";
 import { PrismaService } from "src/prisma/prisma.service";
@@ -9,11 +8,8 @@ import { PrismaService } from "src/prisma/prisma.service";
 export class MakePostService {
 	constructor(private prisma: PrismaService, private config: ConfigService) {}
 	
-	async createPost(dto: MakePostDTO, res: Response): Promise<number | void> {
-		if (dto.key !== this.config.get("POST_KEY")) {
-			res.sendStatus(401);
-			return;
-		}
+	async createPost(dto: MakePostDTO): Promise<number | void> {
+		if (dto.key !== this.config.get("POST_KEY")) throw new UnauthorizedException();
 
 		try {
 			const res = await this.prisma.posts.create({
