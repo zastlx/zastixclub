@@ -22,10 +22,10 @@ export default () => {
         <>
             <NavBar />
             <div className="container">
-                <Background/>
+                <Background />
                 <div className={styles.post}>
                     <div onClick={() => setIsPreview(!isPreview)} className={styles.togglePreviewBtn}>{isPreview ? "Editor" : "Preview"}</div>
-                    { isPreview ? <Preview title={title} content={content}/> : <Editor content={content} title={title} setContent={setContent} setTitle={setTitle}/> }
+                    {isPreview ? <Preview title={title} content={content} /> : <Editor content={content} title={title} setContent={setContent} setTitle={setTitle} />}
                 </div>
                 <div style={{
                     display: "flex",
@@ -33,11 +33,11 @@ export default () => {
                     gap: "2vh",
                     marginBottom: "4vh"
                 }}>
-                    <input className={styles.keyInput} type="password" placeholder="Key" onChange={(e) => setKey(e.target.value)}/>
-                    <div className={styles.makePostBtn} onClick={() => { axios.post("/api/makepost", { title, content: content.replace(/\n/g, "    \n"), key}).then(() => location.href="/blog")}}>Post</div>
+                    <input className={styles.keyInput} type="password" placeholder="Key" onChange={(e) => setKey(e.target.value)} />
+                    <div className={styles.makePostBtn} onClick={() => { axios.post("/api/makepost", { title, content: content.replace(/\n/g, "    \\n"), key }).then(() => location.href = "/blog") }}>Post</div>
                 </div>
             </div>
         </>
     );
-} 
+}
 
