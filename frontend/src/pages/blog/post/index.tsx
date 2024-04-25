@@ -24,7 +24,7 @@ export default () => {
                 document.title = `${post.title} | zastix' site`;
             }
             else navigate("/blog");
-        } 
+        }
         else PostsManager.loadPosts().then(() => navigate(`/blog/${id}`)); // hacky way to force a rerender but it works
     }, []);
 
@@ -32,13 +32,14 @@ export default () => {
         <>
             <NavBar />
             <div className="container">
-                <Background/>
-                { post && <div className={styles.post}>
+                <Background />
+                {post && <div className={styles.post}>
                     <h1>
                         {post.title}
-                        <hr/>
+                        <hr />
                     </h1>
-                    <ReactMarkdown className={styles.content} linkTarget="_blank" rehypePlugins={[rehypeRaw as any]} remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
+                    {/* @ts-ignore */}
+                    <ReactMarkdown className={styles.content} linkTarget="_blank" rehypePlugins={[rehypeRaw as any]} remarkPlugins={[remarkGfm]}>{post.content.replaceAll("\\n", "\n")}</ReactMarkdown>
                 </div>}
             </div>
         </>
