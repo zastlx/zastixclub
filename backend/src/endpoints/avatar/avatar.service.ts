@@ -5,11 +5,13 @@ import { DiscordUser } from "src/types";
 
 @Injectable()
 export class AvatarService {
-	constructor(private config: ConfigService) {}
-	private cachedUsers: {[id: string]: {
+	constructor(private config: ConfigService) { }
+	private cachedUsers: {
+		[id: string]: {
 			user: DiscordUser;
 			date: Date;
-		}} = {};
+		}
+	} = {};
 
 	async fetchUser(id: string): Promise<DiscordUser> {
 		const cached = this.cachedUsers[id];
@@ -32,7 +34,7 @@ export class AvatarService {
 
 		try {
 			const user = await this.fetchUser(userid);
-			return `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=4096`;
+			return `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=64`;
 		} catch (e) {
 			throw e;
 		}
