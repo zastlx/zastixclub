@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -14,26 +8,26 @@ datasource db {
 }
 
 model Posts {
-  id        Int   @id @unique @default(autoincrement())
-  title     String
-  content   String
-  date      DateTime @default(now())
+  id      Int      @id @unique @default(autoincrement())
+  title   String
+  content String
+  date    DateTime @default(now())
 }
 
 model Reviews {
-  id        Int   @id @unique @default(autoincrement())
-  discord   String @default("")
-  name      String
-  review    String
-  link      String
+  id      Int    @id @unique @default(autoincrement())
+  name    String
+  review  String
+  link    String
+  discord String @default("")
 }
 
 model Projects {
-  id        Int   @id @unique @default(autoincrement())
-  link      String
-  name      String
-  img       String
-  desc      String
-  src       String?
-  outline   Boolean @default(true)
+  id      Int     @id @unique @default(autoincrement())
+  link    String
+  name    String
+  img     String
+  desc    String
+  src     String?
+  outline Boolean @default(true)
 }
